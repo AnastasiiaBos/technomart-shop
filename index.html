@@ -51,7 +51,7 @@
         </li>
       </ul>
       <nav class="header-navigation">
-        <ul>
+        <ul class="header-navigation-list">
           <li>
             <a>Главная</a>
           </li>
@@ -83,27 +83,27 @@
         <ul class="features-list">
           <li class="features-item">
             <h3>Материалы</h3>
-            <a class="features-button bucket" href="blank.html">На любой вкус</a>
+            <a class="button bucket" href="blank.html">На любой вкус</a>
             <!-- псевдоэлемент Bucket.svg, фон - background-color -->
           </li>
           <li class="features-item">
             <h3>Инструмент</h3>
-            <a class="features-button drill" href="blank.html">На все случаи</a>
+            <a class="button drill" href="blank.html">На все случаи</a>
             <!-- псевдоэлемент Drill.svg, фон - background-color  -->
           </li>
           <li class="features-item">
             <h3>Техника</h3>
-            <a class="features-button tractor" href="blank.html">Для стройки</a>
+            <a class="button tractor" href="blank.html">Для стройки</a>
             <!-- псевдоэлемент Tractor.svg, фон - background-color  -->
           </li>
           <li class="features-item">
             <h3>Скидки 50%</h3>
-            <a class="features-button basket" href="blank.html">На 350 товаров</a>
+            <a class="button basket" href="blank.html">На 350 товаров</a>
             <!-- псевдоэлемент Basket.svg, фон - background-color  -->
           </li>
           <li class="features-item">
             <h3>Доставка</h3>
-            <a class="features-button bus" href="blank.html">Бесплатно</a>
+            <a class="button bus" href="blank.html">Бесплатно</a>
             <!-- псевдоэлемент Bus.svg, фон - background-color  -->
           </li>
         </ul>
@@ -343,32 +343,34 @@
           <a href="blank.html">Спецпредложения</a>
         </li>
       </ul>
-      <p class="footer-copyright">
-        © 2010–2021 Компания «Техномарт»<br>
-        Все права защищены
-      </p>
-      <section class="footer-social">
-        <h2>Мы в соцсетях</h2><!-- скроем позднее -->
-        <ul>
-          <li>
-            <a class="social-button" href="blank.html">Вконтакте</a>
-          </li>
-          <li>
-            <a class="social-button" href="blank.html">Фейсбук</a>
-          </li>
-          <li>
-            <a class="social-button" href="blank.html">Инстаграм</a>
-          </li>
-        </ul>
-      </section>
-      <p class="feedback">
-        Обратная связь:
-        <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-      </p>
-      <p class="developer">
-        Разработано:
-        <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
-      </p>
+      <div class="footer-container">
+        <p class="footer-copyright">
+          © 2010–2021 Компания «Техномарт»<br>
+          Все права защищены
+        </p>
+        <section class="footer-social">
+          <h2>Мы в соцсетях</h2><!-- скроем позднее -->
+          <ul class="footer-social-list">
+            <li>
+              <a class="social-button-vk" href="blank.html">Вконтакте</a>
+            </li>
+            <li>
+              <a class="social-button-fb" href="blank.html">Фейсбук</a>
+            </li>
+            <li>
+              <a class="social-button-inst" href="blank.html">Инстаграм</a>
+            </li>
+          </ul>
+        </section>
+        <p class="feedback">
+          Обратная связь:
+          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </p>
+        <p class="developer">
+          Разработано:
+          <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+        </p>
+      </div>
     </footer>
     <section class="modal"> <!-- модальное окно с формой обратной связи, которое открывается при клике по кнопке «Заблудились?..» -->
       <h2>Форма для связи</h2> <!-- скроем позднее -->
@@ -385,9 +387,7 @@
           <label for="letter">Текст письма:</label>
           <textarea id="letter" name="user-letter" placeholder="В свободной форме"></textarea>
         </p>
-        <div class="modal-footer">
           <button class="button" type="submit">Отправить</button>
-        </div>
       </form>
     </section>
   </body>
