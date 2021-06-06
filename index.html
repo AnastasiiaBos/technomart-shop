@@ -17,22 +17,26 @@
         <a class="header-logo">
           <img src="img/icons/logo.svg" width="108" height="18" alt="Логотип интернет-магазина «Техномарт»"> <!-- фон сделаю в CSS -->
         </a>
-        <form class="header-search" action="https://echo.htmlacademy.ru" method="GET">
-          <input type="search" placeholder="Поиск:">
+        <form action="https://echo.htmlacademy.ru" method="GET">
+          <input class="header-search" type="search" placeholder="Поиск:">
         </form>
-        <ul>
+        <ul class="header-panel">
           <li>
-            <a class="bookmark" href="blank.html">Закладки</a>
+            <a class="bookmark" href="blank.html">Закладки: 0</a> <!-- будет ли считаться число закладок. это отдельное поле? -->
           </li>
           <li>
-            <a class="cart" href="blank.html">Корзина</a>
+            <a class="cart" href="blank.html">Корзина: 0</a> <!-- будет ли считаться число в корзине. это отдельное поле? -->
           </li>
           <li>
             <a class="order" href="blank.html">Оформить заказ</a>
           </li>
         </ul>
       </div>
-      <p class="header-desc">Интернет-магазин строительных материалов и инструментов для ремонта</p> <!-- блок по ширине ограничу в стилях  -->
+      <p class="header-desc">
+        Интернет-магазин<br>
+        строительных материалов<br>
+        и инструментов для ремонта
+      </p>
       <section class="header-contacts">
         <h2>Как нас найти</h2><!-- скроем позднее -->
         <a class="header-contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a>

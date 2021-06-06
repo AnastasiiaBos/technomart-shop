@@ -89,7 +89,115 @@
 }
 
 body {
-  font-family: "", "", ;
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+a {
+  text-decoration: none;
+  /* color: var(--basic-white); */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.main-header,
+.features,
+.main-footer,
+.header-navigation a{
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--basic-white);
+}
+
+.main-header {
+  background-color: var(--basic-blue);
+}
+
+.header-top {
+  background-color: var(--basic-extra-navy);
+}
+
+/* или лучше обернуть лого в div ? */
+.header-logo {
+  background-color: var(--basic-red);
+}
+
+.header-search {
+  background-color: var(--basic-extra-navy);
+}
+
+.header-search::placeholder {
+  color: var(--basic-white);
+}
+
+.header-panel {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-panel a {
+  color: var(--basic-white);
+}
+
+/* или лучше сделать .header-panel li:last-child ? */
+.header-panel .order {
+  background-color: var(--basic-green);
+}
+
+.header-desc {
+  font-style: italic;
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--basic-red);
+}
+
+.header-contacts-phone {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--basic-red);
+}
+
+.header-contacts-address {
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--basic-navy);
+}
+
+.header-login {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-login a {
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.header-navigation {
+  background-color: var(--basic-navy);
+}
+
+.header-navigation ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 
