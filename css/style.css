@@ -76,6 +76,7 @@
   --special-purple: #DC91D8;
   --special-green: #8ED78F;
   --special-yellow: #FFBF47;
+  --special-white: 255, 255, 255;
   --special-grey: #F3F7F9; /* цвет фона в номере телефона в хедере */
 
   --hover-red: #CA2C37;
@@ -102,7 +103,7 @@ body {
 
 a {
   text-decoration: none;
-  /* color: var(--basic-white); */
+  color: var(--basic-white);
 }
 
 img {
@@ -110,10 +111,28 @@ img {
   height: auto;
 }
 
+.button {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: var(--basic-red);
+}
+
+.buy {
+  background-color: var(--basic-green);
+}
+
+.to-bookmarks {
+  color: var(--basic-navy);
+  background-color: var(--basic-white);
+  border: 3px solid var(--basic-green);
+}
+
 .main-header,
 .features,
 .main-footer,
-.header-navigation a{
+.header-navigation a {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -121,7 +140,8 @@ img {
   color: var(--basic-white);
 }
 
-.main-header {
+.main-header,
+.services {
   background-color: var(--basic-blue);
 }
 
@@ -142,7 +162,14 @@ img {
   color: var(--basic-white);
 }
 
-.header-panel {
+.header-panel,
+.header-login,
+.features-list,
+.popular-items-list,
+.popular-producers-list,
+.services-list,
+.services-desc-list,
+.transport-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -177,12 +204,6 @@ img {
   color: var(--basic-navy);
 }
 
-.header-login {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 .header-login a {
   font-size: 21px;
   line-height: 21px;
@@ -200,4 +221,130 @@ img {
   padding: 0;
 }
 
+.features-list h3 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.features-item:first-child {
+  background-color: var(--special-yellow);
+}
+
+.features-item:nth-child(2){
+  background-color: var(--special-blue);
+}
+
+.features-item:nth-child(3){
+  background-color: var(--special-purple);
+}
+
+.features-item:nth-child(4){
+  background-color: var(--special-green);
+}
+
+.features-item:last-child{
+  background-color: var(--special-yellow);
+}
+
+.features-list a {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background-color: rgba(var(--special-white), 0.3);
+}
+
+.slider-perforator-header,
+.slider-drill-header {
+  background-color: var(--basic-black);
+  opacity: 0.25;
+}
+
+.features-slider h2 {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 36px;
+}
+
+.popular-items-header,
+.popular-producers-header {
+  background-color: var(--basic-beige);
+  font-family: "Cuprum", Arial, sans-serif;
+}
+
+.popular-items-header h2,
+.popular-producers-header h2 {
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--basic-navy);
+}
+
+.popular-list-item,
+.popular-producers-item {
+  background-color: var(--basic-white);
+  border: 1px solid var(--basic-shadow);
+}
+
+.popular-list-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+.popular-list-item p{
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 18px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: var(--active-grey);
+}
+
+.new-price {
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+
+.services h2 {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--basic-navy);
+}
+.services>h2 {
+  color: var(--basic-black);
+}
+
+.services-item a {
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 30px;
+  color: var(--basic-white);
+}
+
+.services-item:first-child a{
+  color: var(--basic-navy);
+  background-color: var(--basic-white);
+}
+
+.services-item:not(:first-child) a{
+  background-color: var(--basic-navy);
+}
+
+.desc h2,
+.contacts h2 {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--basic-black);
+}
+
+.transport-item {
+  font-size: 18px;
+  font-family: "Cuprum", Arial, sans-serif;
+  line-height: 24px;
+}
 
