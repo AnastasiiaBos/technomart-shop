@@ -5,38 +5,49 @@
     <title>Каталог интернет-магазина «Техномарт»</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicon/152.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon/180.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
-  <body>
-    <header>
-      <a href="index.html">
-        <img src="img/icons/logo.svg" width="108" height="18" alt="Логотип интернет-магазина «Техномарт»"> <!-- фон сделаю в CSS -->
-      </a>
-      <form action="https://echo.htmlacademy.ru" method="GET">
-        <input type="search" placeholder="Поиск:">
-      </form>
-      <ul>
-        <li>
-          <a href="blank.html">Закладки</a>
-        </li>
-        <li>
-          <a href="blank.html">Корзина</a>
-        </li>
-        <li>
-          <a href="blank.html">Оформить заказ</a>
-        </li>
-      </ul>
-      <p>Интернет-магазин строительных материалов и инструментов для ремонта</p> <!-- блок по ширине ограничу в стилях  -->
-      <section>
+  <body class="page-body">
+    <header class="main-header">
+      <div class="header-top">
+        <a class="header-logo">
+          <img src="img/icons/logo.svg" width="108" height="18" alt="Логотип интернет-магазина «Техномарт»"> <!-- фон сделаю в CSS -->
+        </a>
+        <form action="https://echo.htmlacademy.ru" method="GET">
+          <input class="header-search" type="search" placeholder="Поиск:">
+        </form>
+        <ul class="header-panel">
+          <li>
+            <a class="bookmark" href="blank.html">Закладки: 0</a> <!-- будет ли считаться число закладок. это отдельное поле? -->
+          </li>
+          <li>
+            <a class="cart full" href="blank.html">Корзина: 10</a> <!-- будет ли считаться число в корзине. это отдельное поле? -->
+          </li>
+          <li>
+            <a class="order" href="blank.html">Оформить заказ</a>
+          </li>
+        </ul>
+      </div>
+      <p class="header-desc">
+        Интернет-магазин<br>
+        строительных материалов<br>
+        и инструментов для ремонта
+      </p>
+      <section class="header-contacts">
         <h2>Как нас найти</h2><!-- скроем позднее -->
-        <a href="tel:+78005558628">+7 800 555-86-28</a>
-        <p>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
+        <a class="header-contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a>
+        <p class="header-contacts-address">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
       </section>
-      <section>
+      <section class="user">
         <h2>Раздел клиента</h2><!-- скроем позднее -->
          <!-- псевдоэлемент icon.svg -->
-        <a href="blank.html">Равшан Джамшутович</a>
+        <a class="user-info" href="blank.html">Равшан Джамшутович</a>
         <!-- псевдоэлемент login.svg -->
-        <ul>
+        <ul class="user-profile">
           <li>
             <a href="blank.html">Мои заказы</a>
           </li>
@@ -45,16 +56,16 @@
           </li>
         </ul>
       </section>
-      <nav>
-        <ul>
+      <nav class="header-navigation">
+        <ul class="header-navigation-list">
           <li>
-            <a href="index.html">Главная</a>
+            <a>Главная</a>
           </li>
           <li>
             <a href="blank.html">Компания</a>
           </li>
           <li>
-            <span>Каталог</span>
+            <a href="catalog.html">Каталог</a>
           </li>
           <li>
             <a href="blank.html">Новости</a>

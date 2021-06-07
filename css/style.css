@@ -226,6 +226,11 @@ img {
   background-color: var(--active-extra-navy);
   opacity: 0.5;
 }
+
+.full {
+  background-color: var(--basic-red);
+}
+
 .order {
   background-color: var(--basic-green);
 }
@@ -252,6 +257,7 @@ img {
   font-size: 21px;
   line-height: 30px;
   color: var(--basic-red);
+  border: 3px solid var(--basic-white);
 }
 
 .header-contacts-address {
@@ -491,4 +497,25 @@ img {
   line-height: 18px;
   color: var(--basic-white);
   border: none;
+}
+
+/* catalog.html */
+
+.user-info {
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.user-profile {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.user-profile a {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-navy);
 }
