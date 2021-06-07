@@ -11,7 +11,7 @@
     <link rel="apple-touch-icon" href="img/favicon/180.png">
     <link rel="manifest" href="manifest.webmanifest">
   </head>
-  <body class="page-body">
+  <body class="page-body inner-page">
     <header class="main-header">
       <div class="header-top">
         <a class="header-logo">
@@ -82,8 +82,8 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <ul>
+    <main class="page-catalog container">
+      <ul class="breadcrumbs">
         <li>
           <a href="catalog.html">Каталог</a>
         </li>
@@ -95,9 +95,9 @@
         </li>
       </ul>
       <h1>ПЕРФОРАТОРЫ</h1>
-      <section>
+      <section class="filters">
         <h4>Фильтр:</h4>
-        <form method="get" action="https://echo.htmlacademy.ru">
+        <form class="filter" method="get" action="https://echo.htmlacademy.ru">
           <fieldset>
             <legend>Цена:</legend>
             <input type="range" name="price" min="0" max="40000" step="1" value="30000">
@@ -144,135 +144,135 @@
               </li>
             </ul>
           </fieldset>
-          <button type="submit">Показать</button>
+          <button class="filter-button" type="submit">Показать</button>
         </form>
       </section>
-      <section>
+      <section class="sort">
         <h4>Сортировка:</h4>
-        <button type="button">По цене</button>
-        <button type="button">По типу</button>
-        <button type="button">По функионалу</button>
+        <button class="sort-button price" type="button">По цене</button>
+        <button class="sort-button type" type="button">По типу</button>
+        <button class="sort-button function" type="button">По функионалу</button>
         <!-- псевдоэлементы svg стрелка вниз и вверх -->
       </section>
-      <section>
+      <section class="catalog">
         <h2>Список товаров</h2> <!-- скроем позднее -->
-        <ul> <!-- порядок элементов в каждой карточке поменяем в CSS --><!-- зачеркивание сделаю в CSS, иначе ругается валидатор -->
-          <li>
+        <ul class="catalog-list"> <!-- порядок элементов в каждой карточке поменяем в CSS --><!-- зачеркивание сделаю в CSS, иначе ругается валидатор -->
+          <li class="catalog-item">
             <h3>
               Перфоратор BOSCH<br>
               BFG 6000
             </h3>
             <img src="img/catalog/perforator1.jpg" width="144" height="128" alt="Синий перфоратор Bosch c длинным сверлом">
-            <p>30500 Р.</p>
-            <p>25500 Р.</p>
-            <a href="blank.html">Купить</a>
-            <a href="blank.html">В закладки</a>
+            <p class="old-price">30500 Р.</p>
+            <p class="new-price">25500 Р.</p>
+            <a class="button buy" href="blank.html">Купить</a>
+            <a class="button to-bookmarks" href="blank.html">В закладки</a>
           </li>
-          <li>
+          <li class="catalog-item">
             <h3>
               Перфоратор BOSCH<br>
               BFG 6000
             </h3>
             <img src="img/catalog/perforator1.jpg" width="144" height="128" alt="Синий перфоратор Bosch c длинным сверлом">
-            <p>30500 Р.</p>
-            <p>25500 Р.</p>
-            <a href="blank.html">Купить</a>
-            <a href="blank.html">В закладки</a>
+            <p class="old-price">30500 Р.</p>
+            <p class="new-price">25500 Р.</p>
+            <a class="button buy" href="blank.html">Купить</a>
+            <a class="button to-bookmarks" href="blank.html">В закладки</a>
           </li>
-          <li>
+          <li class="catalog-item">
             <h3>
               Перфоратор BOSCH<br>
               BFG 6000
             </h3>
-            <p>30500 Р.</p>
-            <p>25500 Р.</p>
-            <a href="blank.html">Купить</a>
-            <a href="blank.html">В закладки</a>
+            <p class="old-price">30500 Р.</p>
+            <p class="new-price">25500 Р.</p>
+            <a class="button buy" href="blank.html">Купить</a>
+            <a class="button to-bookmarks" href="blank.html">В закладки</a>
           </li>
-          <li>
+          <li class="catalog-item">
             <h3>
               Перфоратор BOSCH<br>
               BFG 3000
             </h3>
             <img src="img/catalog/perforator2.jpg" width="127" height="112" alt="Синий перфоратор Bosch c коротким сверлом">
-            <p>22500 Р.</p>
-            <p>15500 Р.</p>
-            <a href="blank.html">Купить</a>
-            <a href="blank.html">В закладки</a>
+            <p class="old-price">22500 Р.</p>
+            <p class="new-price">15500 Р.</p>
+            <a class="button buy" href="blank.html">Купить</a>
+            <a class="button to-bookmarks" href="blank.html">В закладки</a>
           </li>
-          <li>
+          <li class="catalog-item">
             <h3>
               Перфоратор BOSCH<br>
               BFG 6000
             </h3>
             <img src="img/catalog/perforator1.jpg" width="144" height="128" alt="Синий перфоратор Bosch c длинным сверлом">
-            <p>30500 Р.</p>
-            <p>25500 Р.</p>
-            <a href="blank.html">Купить</a>
-            <a href="blank.html">В закладки</a>
+            <p class="old-price">30500 Р.</p>
+            <p class="new-price">25500 Р.</p>
+            <a class="button buy" href="blank.html">Купить</a>
+            <a class="button to-bookmarks" href="blank.html">В закладки</a>
           </li>
-          <li>
+          <li class="catalog-item">
             <h3>
               Перфоратор BOSCH<br>
               BFG 2000
             </h3>
             <img src="img/catalog/perforator2.jpg" width="127" height="112" alt="Синий перфоратор Bosch c коротким сверлом">
-            <p>12500 Р.</p>
-            <a href="blank.html">Купить</a>
-            <a href="blank.html">В закладки</a>
+            <p class="new-price">12500 Р.</p>
+            <a class="button buy" href="blank.html">Купить</a>
+            <a class="button to-bookmarks" href="blank.html">В закладки</a>
           </li>
-          <li>
+          <li class="catalog-item">
             <h3>
               Перфоратор BOSCH<br>
               BFG 3000
             </h3>
             <img src="img/catalog/perforator2.jpg" width="127" height="112" alt="Синий перфоратор Bosch c коротким сверлом">
-            <p>22500 Р.</p>
-            <p>15500 Р.</p>
-            <a href="blank.html">Купить</a>
-            <a href="blank.html">В закладки</a>
+            <p class="old-price">22500 Р.</p>
+            <p class="new-price">15500 Р.</p>
+            <a class="button buy" href="blank.html">Купить</a>
+            <a class="button to-bookmarks" href="blank.html">В закладки</a>
           </li>
-          <li>
+          <li class="catalog-item">
             <h3>
               Перфоратор BOSCH<br>
               BFG 6000
             </h3>
             <img src="img/catalog/perforator1.jpg" width="144" height="128" alt="Синий перфоратор Bosch c длинным сверлом">
-            <p>30500 Р.</p>
-            <p>25500 Р.</p>
-            <a href="blank.html">Купить</a>
-            <a href="blank.html">В закладки</a>
+            <p class="old-price">30500 Р.</p>
+            <p class="new-price">25500 Р.</p>
+            <a class="button buy" href="blank.html">Купить</a>
+            <a class="button to-bookmarks" href="blank.html">В закладки</a>
           </li>
-          <li>
+          <li class="catalog-item">
             <h3>
               Перфоратор BOSCH<br>
               BFG 2000
             </h3>
             <img src="img/catalog/perforator2.jpg" width="127" height="112" alt="Синий перфоратор Bosch c коротким сверлом">
-            <p>12500 Р.</p>
-            <a href="blank.html">Купить</a>
-            <a href="blank.html">В закладки</a>
+            <p class="new-price">12500 Р.</p>
+            <a class="button buy" href="blank.html">Купить</a>
+            <a class="button to-bookmarks" href="blank.html">В закладки</a>
           </li>
         </ul>
-        <ul>
-          <li>
-            <span>1</span>
+        <ul class="pagination-list">
+          <li class="pagination-item pagination-item-current">
+            <a>1</a>
           </li>
-          <li>
+          <li class="pagination-item">
             <a href="blank.html">2</a>
           </li>
-          <li>
+          <li class="pagination-item">
             <a href="blank.html">3</a>
           </li>
-          <li>
+          <li class="pagination-item">
             <a href="blank.html">Следующая</a>
           </li>
         </ul>
       </section>
-      <section>
+      <section class="about-perforator">
         <h2>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h2>
         <p>
-          Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
+          Перфоратор - универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
           Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.<br>
           В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
         </p>
