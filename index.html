@@ -15,7 +15,7 @@
     <header class="main-header">
       <div class="header-top">
         <a class="header-logo">
-          <img src="img/icons/logo.svg" width="108" height="18" alt="Логотип интернет-магазина «Техномарт»"> <!-- фон сделаю в CSS -->
+          <img src="img/icons/logo.svg" width="108" height="18" alt="Логотип интернет-магазина «Техномарт»">
         </a>
         <form action="https://echo.htmlacademy.ru" method="GET">
           <input class="header-search" type="search" placeholder="Поиск:">
@@ -38,7 +38,7 @@
         и инструментов для ремонта
       </p>
       <section class="header-contacts">
-        <h2>Как нас найти</h2><!-- скроем позднее -->
+        <h2 class="visually-hidden">Как нас найти</h2>
         <a class="header-contacts-phone" href="tel:+78005558628">+7 800 555-86-28</a>
         <p class="header-contacts-address">г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
       </section>
@@ -77,9 +77,9 @@
       </nav>
     </header>
     <main class="container">
-      <h1>Интернет-магазин «Техномарт»</h1> <!-- скроем позднее -->
+      <h1 class="visually-hidden">Интернет-магазин «Техномарт»</h1>
       <section class="features">
-        <h2>Товары и услуги</h2><!-- скроем позднее -->
+        <h2 class="visually-hidden">Товары и услуги</h2>
         <ul class="features-list">
           <li class="features-item">
             <h3>Материалы</h3>
@@ -256,7 +256,6 @@
           </li>
           <li class="services-desc-item">
             <h2>Гарантия</h2>
-            <!-- блок по ширине ограничу в стилях  -->
             <p class="guarantee">
               Если купленный у нас товар поломается или заискрит,<br>
               а также в случае пожара, спровоцированного его<br>
@@ -349,7 +348,7 @@
           Все права защищены
         </p>
         <section class="footer-social">
-          <h2>Мы в соцсетях</h2><!-- скроем позднее -->
+          <h2 class="visually-hidden">Мы в соцсетях</h2>
           <ul class="footer-social-list">
             <li>
               <a class="social-button-vk" href="blank.html">Вконтакте</a>
@@ -372,8 +371,8 @@
         </p>
       </div>
     </footer>
-    <section class="modal"> <!-- модальное окно с формой обратной связи, которое открывается при клике по кнопке «Заблудились?..» -->
-      <h2>Форма для связи</h2> <!-- скроем позднее -->
+    <section class="modal modal-connection"> <!-- модальное окно с формой обратной связи, которое открывается при клике по кнопке «Заблудились?..» -->
+      <h2 class="visually-hidden">Форма для связи</h2>
       <form class="conection" action="https://echo.htmlacademy.ru" method="post">
         <p class="connection-item">
           <label for="connection-login">Ваше имя:</label>

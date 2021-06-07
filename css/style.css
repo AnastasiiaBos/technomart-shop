@@ -80,6 +80,7 @@
   --special-grey: #F3F7F9; /* цвет фона в номере телефона в хедере */
   --special-beige-grey: #E5E5E5;
   --specia-black: 0, 0, 0; /* basic-black для создания opacity*/
+  --specia-white-beige: #F1F1F1;
 
   --hover-red: #CA2C37;
   --active-red: #BA2732;
@@ -93,7 +94,7 @@
 }
 
 body {
-  min-width: 960px;
+  min-width: 940px;
   margin: 0;
   padding: 0;
   font-family: "PT Sans", Arial, sans-serif;
@@ -368,6 +369,22 @@ img {
   border: 1px solid var(--basic-shadow);
 }
 
+.popular-list-item:hover,
+.popular-list-item:focus {
+  box-shadow: 0px 4px 20px rgba(var(--specia-black), 0.15);
+}
+
+.popular-producers-item:hover,
+.popular-producers-item:focus {
+  box-shadow: 0px 4px 20px rgba(var(--specia-black), 0.15);
+}
+
+
+.popular-producers-item:active {
+  box-shadow: 0px 4px 20px rgba(var(--specia-black), 0.15);
+  opacity: 0.5;
+}
+
 .popular-list-item h3 {
   font-size: 18px;
   font-weight: bold;
@@ -488,13 +505,13 @@ img {
   text-decoration: none;
 }
 
-.modal {
+.modal-connection {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
 }
 
-.modal .button {
+.modal-connection .button {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -525,6 +542,16 @@ img {
   font-size: 16px;
   line-height: 18px;
   color: var(--basic-navy);
+}
+
+.user-profile a:hover,
+.user-profile a:focus {
+  color: var(--basic-red);
+}
+
+.user-info:active,
+.user-profile a:active {
+  color: rgba(var(--basic-grey));
 }
 
 .breadcrumbs a {
@@ -579,7 +606,16 @@ img {
   color: rgba(var(--specia-black), 0.3);
 }
 
-.price {
+.sort-button:hover,
+.sort-button:focus {
+  color: var(--basic-black);
+}
+
+.sort-button:active {
+  color: var(--basic-red);
+}
+
+.sort-button-current {
   color: var(--basic-red);
 }
 
@@ -590,6 +626,11 @@ img {
 .catalog-item {
   background-color: var(--basic-white);
   border: 1px solid var(--basic-shadow);
+}
+
+.catalog-item:hover,
+.catalog-item:focus {
+  box-shadow: 0px 4px 20px rgba(var(--specia-black), 0.15);
 }
 
 .catalog-item h3 {
@@ -606,8 +647,20 @@ img {
   border: 1px solid var(--special-beige-grey);
 }
 
-.pagination-item-current a {
+.pagination-item a:hover,
+.pagination-item a:focus {
+  border: 1px solid rgb(var(--basic-grey));
+}
+
+.pagination-item a:active {
+  border: 1px solid var(--basic-red);
+}
+
+.pagination-item-current a,
+.pagination-item-current a:hover,
+.pagination-item-current a:focus {
   color: var(--basic-white);
+  border: 1px solid var(--basic-red);
   background-color: var(--basic-red);
 }
 
@@ -620,4 +673,36 @@ img {
   font-size: 30px;
   line-height: 30px;
   font-weight: 400;
+}
+
+.modal-add {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.modal-add-buttons {
+  background-color: var(--specia-white-beige);
+}
+
+.modal-add .button {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  border: none;
+}
+
+.modal-add .button-continue {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
