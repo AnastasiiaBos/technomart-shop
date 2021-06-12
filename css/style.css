@@ -455,8 +455,7 @@ img {
   gap: 20px;
 }
 
-.popular-items-header,
-.popular-producers-header {
+.popular-header {
   background-color: var(--basic-beige);
   font-family: "Cuprum", Arial, sans-serif;
   display: grid;
@@ -464,12 +463,15 @@ img {
   margin-bottom: 20px;
 }
 
-.popular-items-header h2,
-.popular-producers-header h2 {
+.popular-header h2 {
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
   color: var(--basic-navy);
+}
+
+.popular-header a {
+  align-self: center;
 }
 
 .popular-list-item,
@@ -700,6 +702,7 @@ img {
   justify-self: end;
 }
 
+.footer-copyright,
 .feedback-developer-item p {
   margin: 0;
   padding: 0;
