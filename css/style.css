@@ -124,6 +124,12 @@ img {
   height: 100%;
 }
 
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
 .main-header-bar {
   background-color: var(--basic-extra-navy);
 }
@@ -204,10 +210,7 @@ img {
   display: grid;
   grid-template-columns: 50% 50%;
   background-color: var(--basic-extra-navy);
-  width: 940px;
-  margin: 0 auto;
   margin-bottom: 46px;
-  padding: 0 10px;
 }
 
 .header-top-container {
@@ -331,15 +334,6 @@ img {
 .header-content {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 10px;
-}
-
-.header-navigation {
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 10px;
 }
 
 .header-navigation-list {
@@ -357,13 +351,6 @@ img {
 }
 
 /* main */
-
-.container {
-  width: 940px;
-  margin: 0 auto;
-  margin-bottom: 70px;
-  padding: 0 10px;
-}
 
 .features {
   margin-bottom: 159px;
@@ -546,7 +533,7 @@ img {
 
 .services>h2 {
   color: var(--basic-black);
-  padding: 64px 0 25px 0;
+  padding: 65px 0 25px 0;
 }
 
 .services>p {
@@ -600,7 +587,7 @@ img {
 .desc-contacts-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-top: 70px;
+  margin: 70px 0;
 }
 
 .contacts {
@@ -621,6 +608,9 @@ img {
 .desc-contacts-container p {
   margin: 0;
   padding: 0;
+}
+
+.desc-contacts-container .first-paragraph {
   margin-bottom: 32px;
 }
 
@@ -647,13 +637,10 @@ img {
   background-color: var(--basic-navy);
 }
 
-.main-footer-wrapper {
+.main-footer-wrapper{
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 58px;
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 10px;
   padding-bottom: 54px;
 }
 
@@ -665,12 +652,9 @@ img {
   background-color: var(--basic-extra-navy);
 }
 
-.footer-container {
+.footer-other {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 10px;
   padding-bottom: 35px;
 }
 
@@ -889,8 +873,9 @@ img {
   border: 1px solid var(--basic-red);
 }
 
-.about-perforator {
+.about-perforator-wrapper {
   background-color: var(--basic-blue);
+  padding-bottom: 68px;
 }
 
 .about-perforator h2 {
@@ -898,6 +883,9 @@ img {
   font-size: 30px;
   line-height: 30px;
   font-weight: 400;
+  margin: 0;
+  padding: 0;
+  padding-top: 64px;
 }
 
 .modal-add {
