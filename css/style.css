@@ -198,45 +198,6 @@ img {
   color: var(--basic-white);
 }
 
-/* header */
-
-.main-header,
-.services {
-  background-color: var(--basic-blue);
-}
-
-.header-top {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  background-color: var(--basic-extra-navy);
-  margin-bottom: 46px;
-}
-
-.header-top-container {
-  display: grid;
-  grid-template-columns: auto 1fr;
-}
-
-.header-logo {
-  background-color: var(--basic-red);
-}
-
-.header-logo:active {
-  background-color: var(--active-red);
-}
-
-.header-search {
-  background-color: var(--basic-extra-navy);
-}
-
-.header-search::placeholder {
-  color: var(--basic-white);
-}
-
-.header-search:focus {
-  background-color: var(--basic-white);
-}
-
 .header-panel,
 .header-login,
 .header-navigation-list,
@@ -254,6 +215,65 @@ img {
   padding: 0;
 }
 
+/* header */
+
+.main-header,
+.services {
+  background-color: var(--basic-blue);
+}
+
+/* header-top: лого, поиск, панель с закладками, корзиной и кнопкой оформления заказа */
+
+.header-top {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-color: var(--basic-extra-navy);
+  margin-bottom: 46px;
+}
+
+.header-top-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  /* display: flex; */
+}
+
+.header-logo {
+  display: block;
+  padding: 0;
+  margin: 0;
+  padding: 10px 56px;
+  background-color: var(--basic-red);
+  /* box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24) */
+}
+
+.header-logo img {
+  width: 108px;
+  height: 18px;
+}
+
+.header-logo:active {
+  background-color: var(--active-red);
+}
+
+.header-search {
+  background-color: var(--basic-extra-navy);
+  margin-left: 42px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+input[type=search]{
+  width: 100%;
+}
+
+.header-search::placeholder {
+  color: var(--basic-white);
+}
+
+.header-search:focus {
+  background-color: var(--basic-white);
+}
+
 .header-panel {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -261,7 +281,16 @@ img {
 }
 
 .header-panel a {
+  display: block;
   color: var(--basic-white);
+}
+
+.bookmark {
+  padding: 9px 24px 9px 43px;
+}
+
+.cart {
+  padding: 9px 23px 9px 47px;
 }
 
 .bookmark:active,
@@ -275,6 +304,7 @@ img {
 }
 
 .order {
+  padding: 9px 16px 9px 19px;
   background-color: var(--basic-green);
 }
 
@@ -288,6 +318,13 @@ img {
   opacity: 0.5;
 }
 
+/* header-content: Хедер с описанием магазина, адресом и регистрацией */
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+}
+
 .header-desc {
   font-style: italic;
   font-size: 16px;
@@ -297,13 +334,16 @@ img {
   padding-left: 30px;
 }
 
-.header-contacts-phone {
+/* надо разобраться с блочной моделью */
+.header-contacts a {
+  display: inline-block;
+  padding: 4px 50px 5px 74px;
+  margin-bottom: 3px;
   font-weight: bold;
   font-size: 21px;
   line-height: 30px;
   color: var(--basic-red);
   border: 3px solid var(--basic-white);
-  margin-bottom: 3px;
 }
 
 .header-contacts-address {
@@ -311,14 +351,32 @@ img {
   line-height: 24px;
   color: var(--basic-navy);
   margin: 0;
+  margin-bottom: 40px;
   padding: 0;
+  text-align: center;
+}
+
+.header-login {
+  display: flex;
+  justify-content: space-between;
 }
 
 .header-login a {
+  display: block;
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
   background-color: var(--basic-white);
+}
+
+.header-login .login {
+  padding: 12px 27px;
+  padding-left: 45px;
+  margin-right: 10px;
+}
+
+.header-login .registration {
+  padding: 12px 24px;
 }
 
 .header-login a:hover,
@@ -330,13 +388,30 @@ img {
   color: rgba(var(--basic-grey));
 }
 
-.header-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
+
+/*header-navigation: Главное меню */
 
 .header-navigation-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   background-color: var(--basic-navy);
+  box-shadow: inset 0px -5px 0px #293449;
+}
+
+.header-navigation-list a {
+  display: block;
+  padding: 16px 28px 20px 28px;
+}
+
+/* не знаю как сделать такой отступ и уменьшить вложенность селекторов  */
+.header-navigation-list li:first-child a {
+  padding-left: 53px;
+}
+
+/* не знаю как сделать такой отступ и уменьшить вложенность селекторов  */
+.header-navigation-list li:last-child a {
+  padding-right: 53px;
 }
 
 .header-navigation-list a:hover,
