@@ -394,20 +394,24 @@
     <section class="modal modal-connection"> <!-- модальное окно с формой обратной связи, которое открывается при клике по кнопке «Заблудились?..» -->
       <h2 class="visually-hidden">Форма для связи</h2>
       <form class="conection" action="https://echo.htmlacademy.ru" method="post">
-        <p class="connection-item">
-          <label for="connection-login">Ваше имя:</label>
-          <input id="connection-login" type="text" name="user-name" placeholder="Имя Фамилия">
-        </p>
-        <p class="connection-item">
-          <label for="connection-email">Ваш e-mail:</label>
-          <input id="connection-email" type="email" name="user-email" placeholder="email@example.com">
-        </p>
-        <p class="connection-item">
-          <label for="letter">Текст письма:</label>
-          <textarea id="letter" name="user-letter" placeholder="В свободной форме"></textarea>
-        </p>
-          <button class="button" type="submit">Отправить</button>
-      </form>
+        <div class="conection-container">
+          <p class="connection-item">
+            <label for="connection-login">Ваше имя:</label>
+            <input id="connection-login" type="text" name="user-name" placeholder="Имя Фамилия">
+          </p>
+          <p class="connection-item">
+            <label for="connection-email">Ваш e-mail:</label>
+            <input id="connection-email" type="email" name="user-email" placeholder="email@example.com">
+          </p>
+          <p class="connection-item-last">
+            <label for="letter">Текст письма:</label>
+            <textarea id="letter" name="user-letter" rows="4" placeholder="В свободной форме"></textarea>
+          </p>
+        </div>
+        <div class="conection-button-container">
+          <button class="connection-button button" type="submit">Отправить</button>
+        </div>
+        </form>
     </section>
   </body>
 </html>
