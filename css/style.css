@@ -919,7 +919,13 @@ input[type=search]{
   text-decoration: none;
 }
 
-/* modal */
+/* modal-connection: модальное окно с формой обратной связи */
+
+.modal {
+  width: 620px;
+  margin: 0 auto;
+  border-top: 7px solid var(--basic-red);
+}
 
 .modal-connection {
   font-family: "Cuprum", Arial, sans-serif;
@@ -935,13 +941,7 @@ input[type=search]{
   border: none;
 }
 
-.conection {
-  width: 620px;
-  margin: 0 auto;
-  border-top: 7px solid var(--basic-red);
-}
-
-.conection-container {
+.connection-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -981,7 +981,7 @@ input[type=search]{
   border-radius: 2px;
 }
 
-.conection-button-container {
+.connection-button-container {
   padding: 37px 80px;
   background-color: var(--connection-button-bar);
 }
@@ -994,6 +994,9 @@ input[type=search]{
 /* catalog.html */
 
 .user-info {
+  display: inline-block;
+  padding: 12px 57px;
+  margin-bottom: 7px;
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
@@ -1010,10 +1013,20 @@ input[type=search]{
   padding: 0;
 }
 
+.user-profile {
+  display: flex;
+  justify-content: center;
+}
+
 .user-profile a {
   font-size: 16px;
   line-height: 18px;
   color: var(--basic-navy);
+  margin-right: 25px;
+}
+
+.user-profile .user-account {
+  margin-right: 0;
 }
 
 .user-profile a:hover,
@@ -1197,18 +1210,24 @@ input[type=search]{
   padding: 0;
 }
 
-.modal-add {
+/* modal-add: модальное окно с сообщением о добавлении товара в корзину */
+
+.modal-add p {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 24px;
   font-weight: bold;
   line-height: 30px;
+  padding: 0;
+  margin: 73px 99px 67px 99px;
 }
 
 .modal-add-buttons {
+  padding: 37px 114px;
   background-color: var(--specia-white-beige);
 }
 
 .modal-add .button {
+  width: 192px;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
