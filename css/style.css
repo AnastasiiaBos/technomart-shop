@@ -556,7 +556,8 @@ input[type=search]{
 /* features - грид с товарами и услугами, слайдер */
 .features {
   margin-top: 59px;
-  margin-bottom: 159px;
+  margin-bottom: 59px;
+  position: relative;
 }
 
 .features-list {
@@ -569,6 +570,7 @@ input[type=search]{
 .features-item {
   position: relative;
   padding: 20px 22px 21px 22px;
+  overflow: hidden;
 }
 
 .features-list h3 {
@@ -645,13 +647,8 @@ input[type=search]{
   background-image: url(../img/icons/goods-and-services-icons/bus.svg);
 }
 
-.slider-perforator {
+.slide{
   grid-area: 2/1/4/3;
-}
-
-.slider-drill{
-  grid-area: 2/1/4/3;
-  order:-1;
 }
 
 .features-item .button {
@@ -673,11 +670,50 @@ input[type=search]{
 
 /* slider-perforator, slider-drill - слайдер */
 
-.slider-perforator-header,
-.slider-drill-header {
-  background-color: var(--basic-black);
-  opacity: 0.25;
+.slide {
+  position: relative;
 }
+
+.slide-current::before {
+  content: "";
+  position: absolute;
+  top: 123px;
+  left: 25px;
+  width: 21px;
+  height: 39px;
+  background-image: url(../img/icons/slider-arrow.svg);
+  z-index: 10;
+}
+
+.slide-current::after {
+  content: "";
+  position: absolute;
+  top: 123px;
+  right: 21px;
+  width: 21px;
+  height: 39px;
+  background-image: url(../img/icons/slider-arrow.svg);
+  transform: rotate(180deg);
+  z-index: 10;
+}
+
+.slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+/* .slider-perforator-header,
+.slider-drill-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 620px;
+  height: 104px;
+  background-color: rgba(var(--basic-black), 0.25);
+  z-index: 5;
+} */
 
 .slider-perforator-header h2,
 .slider-drill-header h2 {
@@ -686,18 +722,55 @@ input[type=search]{
   line-height: 36px;
   text-transform: uppercase;
   margin: 0;
+  margin-bottom: 5px;
   padding: 23px 0 0 24px;
+  z-index: 10;
 }
 
 .slider-perforator-header p,
 .slider-drill-header p {
   margin: 0;
   padding:0 0 16px 24px;
+  z-index: 10;
 }
 
-.slider-perforator .button,
-.slider-drill .button {
+.button-slider {
+  position: absolute;
+  bottom: 27px;
+  left: 24px;
   width: 192px;
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: 36px;
+  left: 295px;
+  z-index: 20;
+}
+
+.slide {
+  display: none;
+}
+
+.slide-current {
+  display: block;
+}
+
+.slider-controls .current {
+  background-color: var(--basic-red);
+}
+
+.slider-controls button {
+  display: inline-block;
+  margin-right: 5px;
+  padding: 0;
+  box-sizing: border-box;
+  width: 10px;
+  height: 10px;
+  background-color: var(--basic-white);
+  border: 2px solid var(--basic-white);
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 /* popular-items, popular-producers - популярные товары и популярные производители */
@@ -889,6 +962,10 @@ input[type=search]{
   font-weight: 400;
 }
 
+.services-desc-list {
+  position: relative;
+}
+
 .services-desc-list p{
   margin: 0;
   padding: 0;
@@ -934,11 +1011,16 @@ input[type=search]{
   line-height: 30px;
 }
 
-.delivery {
+.choice {
   position: relative;
+  display: none;
 }
 
-.delivery::after {
+.choice-current {
+  display: block;
+}
+
+.services-desc-item:first-child::after {
   content: "";
   position: absolute;
   top: 0;
@@ -948,11 +1030,7 @@ input[type=search]{
   background-image: url(../img/delivery.png);
 }
 
-.guarantee {
-  position: relative;
-}
-
-.guarantee::after {
+.services-desc-item:nth-child(2)::after {
   content: "";
   position: absolute;
   top: 0;
@@ -962,11 +1040,7 @@ input[type=search]{
   background-image: url(../img/guarantee.png);
 }
 
-.credit {
-  position: relative;
-}
-
-.credit::after {
+.services-desc-item:nth-child(3)::after {
   content: "";
   position: absolute;
   top: 0;
@@ -976,25 +1050,19 @@ input[type=search]{
   background-image: url(../img/credit.png);
 }
 
-.services-item:first-child a{
+.services-item.current a {
   color: var(--basic-navy);
   background-color: var(--basic-white);
   box-shadow: 0px 1px 0px var(--basic-white);
 }
-
-.services-item:first-child a:hover,
-.services-item:first-child a:focus {
-  color: var(--basic-white);
-  background-color: var(--basic-extra-navy);
-}
-
-.services-item:not(:first-child) a{
+.services-item a {
   background-color: var(--basic-navy);
   box-shadow: 0px 1px 0px var(--basic-extra-navy), inset 0px 1px 0px var(--shadow-navy);
 }
 
-.services-item:not(:first-child) a:hover,
-.services-item:not(:first-child) a:focus {
+.services-item a:hover,
+.services-item a:focus {
+  color: var(--basic-white);
   background-color: var(--basic-extra-navy);
 }
 
