@@ -237,7 +237,7 @@ img {
 /* header */
 
 .main-header,
-.services {
+.services-bar {
   background-color: var(--basic-blue);
 }
 
@@ -310,14 +310,13 @@ img {
   opacity: 0.3;
 }
 
-.header-search-form:hover::before,
-.header-search-form:focus::before {
+.header-search-form:hover::before {
   opacity: 1;
 }
 
 input[type=search]{
   display: block;
-  width: 100%;
+  width: 228px;
 }
 
 .header-search::placeholder {
@@ -325,6 +324,15 @@ input[type=search]{
 }
 
 .header-search:focus {
+  background-color: var(--basic-white);
+  outline: 0;
+  outline-offset: 0;
+  border: none;
+}
+
+.header-search-form:focus::before,
+.header-search-form:active::before {
+  background-image: url(../img/icons/search-active.svg);
   background-color: var(--basic-white);
 }
 
@@ -489,9 +497,9 @@ input[type=search]{
   padding: 12px 24px;
 }
 
-.header-login .login:hover::before path,
-.header-login .login:focus::before path {
-  fill: var(--hover-navy);
+.header-login .login:hover::before,
+.header-login .login:focus::before {
+  background-image: url(../img/icons/login-hover.svg);
 }
 
 .header-login a:hover,
@@ -501,6 +509,10 @@ input[type=search]{
 
 .header-login a:active {
   color: rgba(var(--basic-grey));
+}
+
+.header-login .login:active::before {
+  background-image: url(../img/icons/login.svg);
 }
 
 
@@ -543,7 +555,8 @@ input[type=search]{
 
 /* features - грид с товарами и услугами, слайдер */
 .features {
-  margin: 59px 0 159px 0;
+  margin-top: 59px;
+  margin-bottom: 159px;
 }
 
 .features-list {
@@ -727,13 +740,35 @@ input[type=search]{
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
   width: 220px;
   min-height: 318px;
   margin-right: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   box-sizing: border-box;
   background-color: var(--basic-white);
   border: 1px solid var(--basic-shadow);
+  overflow: hidden;
+}
+
+.flag::before {
+  content: "new";
+  position: absolute;
+  text-transform: uppercase;
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  padding-top: 7px;
+  top: 10px;
+  right: -25px;
+  width: 100px;
+  height: 30px;
+  box-sizing: border-box;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+  transform: rotate(45deg);
 }
 
 .popular-list-item:nth-child(4n) {
@@ -769,10 +804,29 @@ input[type=search]{
   color: rgba(var(--active-grey));
 }
 
-.new-price {
+.popular-list-item .new-price,
+.catalog-item .new-price {
+  position: relative;
+  width: 122px;
+  padding: 10px 25px 10px 32px;
+  box-sizing: border-box;
+  align-self: flex-start;
+  margin-left: 47px;
   margin-bottom: 21px;
   color: var(--basic-white);
   background-color: var(--basic-red);
+  border-radius: 2px;
+}
+
+.new-price::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 121px;
+  width: 0;
+  height: 0;
+  border: 19px solid transparent;
+	border-left-color: var(--basic-red);
 }
 
 .popular-list-item:hover,
@@ -954,7 +1008,8 @@ input[type=search]{
 .desc-contacts-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: 70px 0;
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
 
 .contacts {
@@ -1311,6 +1366,24 @@ input[type=search]{
   color: var(--basic-red);
 }
 
+.user-info:hover::before,
+.user-info:focus::before {
+  background-image: url(../img/icons/user-hover.svg);
+}
+
+.user-info:active::before {
+  background-image: url(../img/icons/user.svg);
+}
+
+.user-info:hover::after,
+.user-info:focus::after {
+  background-image: url(../img/icons/logout-hover.svg);
+}
+
+.user-info:active::after {
+  background-image: url(../img/icons/logout.svg);
+}
+
 .user-info:active,
 .user-profile a:active {
   color: rgba(var(--basic-grey));
@@ -1508,6 +1581,7 @@ input[type=search]{
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
   width: 220px;
   min-height: 318px;
   margin-right: 20px;
@@ -1515,6 +1589,7 @@ input[type=search]{
   box-sizing: border-box;
   background-color: var(--basic-white);
   border: 1px solid var(--basic-shadow);
+  overflow: hidden;
 }
 
 .catalog-item:nth-child(3n) {
