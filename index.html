@@ -19,8 +19,21 @@
             <a class="header-logo">
               <img src="img/icons/logo.svg" width="108" height="18" alt="Логотип интернет-магазина «Техномарт»">
             </a>
+            <!-- <form class="header-search-form" action="https://echo.htmlacademy.ru" method="GET">
+              <label for="search">
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill="white"/>
+                </svg>
+              </label>
+              <input class="header-search" id="search" type="search" placeholder="Поиск:">
+            </form> -->
             <form class="header-search-form" action="https://echo.htmlacademy.ru" method="GET">
-              <input class="header-search" type="search" placeholder="Поиск:">
+              <label class="header-search-label" for="search">
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill="white"/>
+                </svg>
+                <input class="header-search" id="search" type="search" placeholder="Поиск:">
+              </label>
             </form>
           </div>
           <ul class="header-panel">
@@ -107,30 +120,39 @@
             <h3>Доставка</h3>
             <a class="button" href="blank.html">Бесплатно</a>
           </li>
-          <li class="slider-perforator slide slide-current">
-            <div class="slider-perforator-header">
-              <h2>Перфораторы</h2>
-              <p>Настоящие мужские игрушки</p>
-            </div>
-            <img src="img/slider-perforator.jpg" width="620" height="266" alt="Мастер с перфоратором Bosch">
-          </li>
-          <li class="slider-drill slide">
-            <div class="slider-drill-header">
-              <h2>Дрели</h2>
-              <p>Соседям на радость!</p>
-            </div>
-            <img src="img/slider-drill.jpg" width="620" height="266" alt="Мастер с дрелью Bosch">
+          <li class="features-item-slider">
+            <ul class="slider">
+              <li class="slider-item slide slide-current">
+                <h2>Перфораторы</h2>
+                <p>Настоящие мужские игрушки</p>
+                <img src="img/slider-perforator.jpg" width="620" height="266" alt="Мастер с перфоратором Bosch">
+                <a class="button button-slider" href="catalog.html">Открыть каталог</a>
+              </li>
+              <li class="slider-item slide">
+                <h2>Дрели</h2>
+                <p>Соседям на радость!</p>
+                <img src="img/slider-drill.jpg" width="620" height="266" alt="Мастер с дрелью Bosch">
+                <a class="button button-slider" href="catalog.html">Открыть каталог</a>
+              </li>
+              <li class="slider-controls">
+                <button class="current" type="button">
+                  <span class="visually-hidden">Первый слайд</span>
+                </button>
+                <button type="button">
+                  <span class="visually-hidden">Второй слайд</span>
+                </button>
+              </li>
+              <li class="slider-arrows">
+                <button class="back" type="button">
+                  <span class="visually-hidden">Назад</span>
+                </button>
+                <button class="forward" type="button">
+                  <span class="visually-hidden">Вперед</span>
+                </button>
+              </li>
+            </ul>
           </li>
         </ul>
-        <a class="button button-slider" href="catalog.html">Открыть каталог</a>
-        <div class="slider-controls">
-          <button class="current" type="button">
-            <span class="visually-hidden">Первый слайд</span>
-          </button>
-          <button type="button">
-            <span class="visually-hidden">Второй слайд</span>
-          </button>
-        </div>
       </section>
       <section class="popular-items container">
         <div class="popular-header">
@@ -148,8 +170,10 @@
             </div>
             <p class="old-price">32500 Р.</p>
             <p class="new-price">25500 Р.</p>
-            <a class="button buy" href="blank.html">Купить</a>
-            <a class="button to-bookmarks" href="blank.html">В закладки</a>
+            <div class="buy-bookmarks-wrapper">
+              <a class="button buy" href="blank.html">Купить</a>
+              <a class="button to-bookmarks" href="blank.html">В закладки</a>
+            </div>
           </li>
           <li class="popular-list-item flag">
             <h3>
@@ -161,8 +185,10 @@
             </div>
             <p class="old-price">22500 Р.</p>
             <p class="new-price">15500 Р.</p>
-            <a class="button buy" href="blank.html">Купить</a>
-            <a class="button to-bookmarks" href="blank.html">В закладки</a>
+            <div class="buy-bookmarks-wrapper">
+              <a class="button buy" href="blank.html">Купить</a>
+              <a class="button to-bookmarks" href="blank.html">В закладки</a>
+            </div>
           </li>
           <li class="popular-list-item">
             <h3>
@@ -174,8 +200,10 @@
             </div>
             <p class="old-price">30500 Р.</p>
             <p class="new-price">25500 Р.</p>
-            <a class="button buy" href="blank.html">Купить</a>
-            <a class="button to-bookmarks" href="blank.html">В закладки</a>
+            <div class="buy-bookmarks-wrapper">
+              <a class="button buy" href="blank.html">Купить</a>
+              <a class="button to-bookmarks" href="blank.html">В закладки</a>
+            </div>
           </li>
           <li class="popular-list-item flag">
             <h3>
@@ -187,8 +215,10 @@
             </div>
             <p class="old-price">22500 Р.</p>
             <p class="new-price">12500 Р.</p>
-            <a class="button buy" href="blank.html">Купить</a>
-            <a class="button to-bookmarks" href="blank.html">В закладки</a>
+            <div class="buy-bookmarks-wrapper">
+              <a class="button buy" href="blank.html">Купить</a>
+              <a class="button to-bookmarks" href="blank.html">В закладки</a>
+            </div>
           </li>
         </ul>
       </section>
