@@ -20,7 +20,12 @@
               <img src="img/icons/logo.svg" width="108" height="18" alt="Логотип интернет-магазина «Техномарт»">
             </a>
             <form class="header-search-form" action="https://echo.htmlacademy.ru" method="GET">
-              <input class="header-search" type="search" placeholder="Поиск:">
+              <input class="header-search" id="search" type="search" placeholder="Поиск:">
+              <label for="search">
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill="white"/>
+                </svg>
+              </label>
             </form>
           </div>
           <ul class="header-panel">
@@ -107,33 +112,45 @@
           <form class="filter" method="get" action="https://echo.htmlacademy.ru">
             <fieldset class="filter-price">
               <legend>Цена:</legend>
-              <input type="range" name="price" min="0" max="40000" step="1" value="30000">
-              <p>
-                <input  type="text" name="min-price" placeholder="0"> -
-                <input  type="text" name="min-price" placeholder="30000">
-              </p>
+              <div class="range-filter">
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min" tabindex="0"></div>
+                  <div class="toggle toggle-max" tabindex="0"></div>
+                </div>
+                <div class="price-controls">
+                  <label class="min-price">
+                    <input type="number" name="min-price" value="0">
+                  </label>
+                  <label class="max-price">
+                   - <input type="number" name="max-price" value="15000">
+                  </label>
+                </div>
+              </div>
             </fieldset>
-            <fieldset>
+            <fieldset class="filter-producers">
               <legend>Производители:</legend>
               <ul>
-                <li>
-                  <input id="filter-bosch" type="checkbox" name="bosch" checked>
+                <li class="filter-option filter-checkbox">
+                  <input class="visually-hidden filter-input-checkbox" id="filter-bosch" type="checkbox" name="bosch" checked disabled>
                   <label for="filter-bosch">Bosch</label>
                 </li>
-                <li>
-                  <input id="filter-interskol" type="checkbox" name="interskol">
+                <li class="filter-option filter-checkbox">
+                  <input class="visually-hidden filter-input-checkbox" id="filter-interskol" type="checkbox" name="interskol">
                   <label for="filter-interskol">Интерскол</label>
                 </li>
-                <li>
-                  <input id="filter-makita" type="checkbox" name="makita" checked>
+                <li class="filter-option filter-checkbox">
+                  <input class="visually-hidden filter-input-checkbox" id="filter-makita" type="checkbox" name="makita" checked>
                   <label for="filter-makita">Makita</label>
                 </li>
-                <li>
-                  <input id="filter-dewalt" type="checkbox" name="dewalt">
+                <li class="filter-option filter-checkbox">
+                  <input class="visually-hidden filter-input-checkbox" id="filter-dewalt" type="checkbox" name="dewalt">
                   <label for="filter-dewalt">Dewalt</label>
                 </li>
-                <li>
-                  <input id="filter-hitachi" type="checkbox" name="hitachi">
+                <li class="filter-option filter-checkbox">
+                  <input disabled class="visually-hidden filter-input-checkbox" id="filter-hitachi" type="checkbox" name="hitachi">
                   <label for="filter-hitachi">Hitachi</label>
                 </li>
               </ul>
@@ -141,12 +158,12 @@
             <fieldset>
               <legend>Питание:</legend>
               <ul>
-                <li>
-                  <input id="filter-accumulator" type="radio" name="power-supply" value="accumulator" checked>
+                <li class="filter-option filter-radio">
+                  <input class="visually-hidden filter-input-radio" id="filter-accumulator" type="radio" name="power-supply" value="accumulator" checked>
                   <label for="filter-accumulator">Аккумуляторные</label>
                 </li>
-                <li>
-                  <input id="filter-network" type="radio" name="power-supply" value="network">
+                <li class="filter-option filter-radio">
+                  <input class="visually-hidden filter-input-radio" id="filter-network" type="radio" name="power-supply" value="network">
                   <label for="filter-network">Сетевые</label>
                 </li>
               </ul>
@@ -156,10 +173,33 @@
         </section>
         <section class="sort">
           <h4>Сортировка:</h4>
-          <button class="sort-button sort-button-current" type="button">По цене</button>
-          <button class="sort-button" type="button">По типу</button>
-          <button class="sort-button" type="button">По функионалу</button>
-          <!-- псевдоэлементы svg стрелка вниз и вверх -->
+          <ul class="sort-list">
+            <li>
+              <button class="sort-button sort-button-current" type="button">По цене</button>
+            </li>
+            <li>
+              <button class="sort-button" type="button">По типу</button>
+            </li>
+            <li>
+              <button class="sort-button" type="button">По функионалу</button>
+            </li>
+            <li>
+              <button class="sort-arrow-down sort-arrow-current" type="button">
+                <span class="visually-hidden">От дорогих к дешевым</span>
+                <svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.66241 0L11.1624 10L0.162415 10" fill="#C5C5C5"/>
+                </svg>
+              </button>
+            </li>
+            <li>
+              <button class="sort-arrow-up" type="button">
+                <span class="visually-hidden">От дешевых к дорогим</span>
+                <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.5 10L0 0H11" fill="#C5C5C5"/>
+                </svg>
+              </button>
+            </li>
+          </ul>
         </section>
         <section class="catalog">
           <h2 class="visually-hidden">Список товаров</h2>
