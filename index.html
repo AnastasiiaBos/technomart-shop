@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Интернет-магазин «Техномарт»</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
 
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon/152.svg" type="image/svg+xml">
@@ -452,13 +452,23 @@
           </p>
           <p class="connection-item-last">
             <label for="letter">Текст письма:</label>
-            <textarea id="letter" name="user-letter" rows="4" placeholder="В свободной форме"></textarea>
+            <textarea id="letter" name="user-letter" rows="5" placeholder="В свободной форме"></textarea>
           </p>
         </div>
         <div class="connection-button-container">
           <button class="connection-button button" type="submit">Отправить</button>
         </div>
         </form>
+        <button class="modal-close" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+    </section>
+    <section class="modal modal-map"> <!-- модальное окно с картой, которое открывается при клике на карту» -->
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15974.010487791693!2d30.290198483884456!3d59.96944861268982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe703c377f3424272!2sStudio%20212!5e0!3m2!1sru!2spl!4v1624911849381!5m2!1sru!2spl" width="943" height="442" allowfullscreen title="Офис компании по адресу набережная реки Карповки, 5, литера П, Санкт-Петербург"></iframe>
+      <button class="modal-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
     </section>
   </body>
 </html>
