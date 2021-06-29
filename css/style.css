@@ -1466,11 +1466,12 @@ img {
 .modal-map {
   display: none;
   width: 943px;
-  height: max-content;
+  height: 442px;
 }
 
 .modal-map iframe {
   border: none;
+  height: 442px;
 }
 
 .modal-map .modal-close {
