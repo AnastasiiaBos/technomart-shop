@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Каталог интернет-магазина «Техномарт»</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
 
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon/152.svg" type="image/svg+xml">
@@ -155,7 +155,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset>
+            <fieldset class="filter-charge">
               <legend>Питание:</legend>
               <ul>
                 <li class="filter-option filter-radio">
@@ -293,7 +293,7 @@
                 <a class="button to-bookmarks" href="blank.html">В закладки</a>
               </div>
             </li>
-            <li class="catalog-item">
+            <li class="catalog-item flag">
               <h3>
                 Перфоратор BOSCH<br>
                 BFG 3000
@@ -308,7 +308,7 @@
                 <a class="button to-bookmarks" href="blank.html">В закладки</a>
               </div>
             </li>
-            <li class="catalog-item flag">
+            <li class="catalog-item">
               <h3>
                 Перфоратор BOSCH<br>
                 BFG 6000
@@ -323,7 +323,7 @@
                 <a class="button to-bookmarks" href="blank.html">В закладки</a>
               </div>
             </li>
-            <li class="catalog-item">
+            <li class="catalog-item flag">
               <h3>
                 Перфоратор BOSCH<br>
                 BFG 2000
@@ -450,9 +450,9 @@
               </p>
             </li>
             <li class="feedback-developer-item">
-              Разработано:
+              Разработано &ndash;
               <p>
-                <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
+                <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
               </p>
             </li>
           </ul>
@@ -467,6 +467,9 @@
         <button class="button button-sumbit" type="submit">Оформить заказ</button>
         <button class="button button-continue"  type="button">Продолжить покупки</button>
       </div>
+      <button class="modal-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
     </section>
   </body>
 </html>
