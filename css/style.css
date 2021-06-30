@@ -186,6 +186,8 @@ img {
   width: 15px;
   height: 15px;
   background-image: url(../img/icons/cart.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
   opacity: 0.3;
 }
 
@@ -270,6 +272,8 @@ img {
   grid-template-columns: auto 1fr;
 }
 
+/* main logo */
+
 .header-logo {
   display: inline-block;
   position: relative;
@@ -298,7 +302,9 @@ img {
   box-shadow: inset 0px -5px 0px rgba(var(--special-black), 0.24);
 }
 
-/* main logo */
+.header-logo:focus {
+  background-color: var(--basic-red);
+}
 
 .header-logo:active {
   background-color: var(--active-red);
@@ -389,6 +395,8 @@ img {
   width: 14px;
   height: 16px;
   background-image: url(../img/icons/bookmark.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
   opacity: 0.3;
 }
 
@@ -405,6 +413,8 @@ img {
   width: 15px;
   height: 15px;
   background-image: url(../img/icons/cart.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
   opacity: 0.3;
 }
 
@@ -480,6 +490,8 @@ img {
   width: 18px;
   height: 19px;
   background-image: url(../img/icons/phone.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .header-contacts-address {
@@ -522,6 +534,8 @@ img {
   width: 20px;
   height: 17px;
   background-image: url(../img/icons/login.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .header-login .registration {
@@ -531,6 +545,8 @@ img {
 .header-login .login:hover::before,
 .header-login .login:focus::before {
   background-image: url(../img/icons/login-hover.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .header-login a:hover,
@@ -544,6 +560,8 @@ img {
 
 .header-login .login:active::before {
   background-image: url(../img/icons/login.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 /*header-navigation: Главное меню */
@@ -628,6 +646,8 @@ img {
   width: 44px;
   height: 65px;
   background-image: url(../img/icons/goods-and-services-icons/bucket.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .features-item:nth-child(2){
@@ -640,6 +660,8 @@ img {
   width: 75px;
   height: 61px;
   background-image: url(../img/icons/goods-and-services-icons/drill.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .features-item:nth-child(3){
@@ -650,6 +672,8 @@ img {
   width: 77px;
   height: 62px;
   background-image: url(../img/icons/goods-and-services-icons/tractor.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .features-item:nth-child(4){
@@ -663,6 +687,8 @@ img {
   width: 59px;
   height: 72px;
   background-image: url(../img/icons/goods-and-services-icons/basket.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .features-item:nth-child(5){
@@ -675,6 +701,8 @@ img {
   width: 78px;
   height: 63px;
   background-image: url(../img/icons/goods-and-services-icons/bus.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .features-item-slider{
@@ -771,6 +799,8 @@ img {
   width: 21px;
   height: 39px;
   background-image: url(../img/icons/slider-arrow.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
   background-color: transparent;
   border: none;
   z-index: 2;
@@ -784,6 +814,8 @@ img {
   width: 21px;
   height: 39px;
   background-image: url(../img/icons/slider-arrow.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
   background-color: transparent;
   border: none;
   transform: rotate(180deg);
@@ -955,12 +987,12 @@ img {
   display: block;
 }
 
-.popular-producers-item:hover,
-.popular-producers-item:focus {
+.popular-producers-item a:hover,
+.popular-producers-item a:focus {
   box-shadow: 0px 4px 20px rgba(var(--special-black), 0.15);
 }
 
-.popular-producers-item:active {
+.popular-producers-item a:active {
   box-shadow: 0px 4px 20px rgba(var(--special-black), 0.15);
   opacity: 0.5;
 }
@@ -1046,6 +1078,8 @@ img {
   width: 10px;
   height: 279px;
   background-image: url(../img/line.png);
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .services-list {
@@ -1078,6 +1112,8 @@ img {
   width: 468px;
   height: 261px;
   background-image: url(../img/delivery.png);
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .services-desc-item:nth-child(2)::after {
@@ -1088,6 +1124,8 @@ img {
   width: 389px;
   height: 283px;
   background-image: url(../img/guarantee.png);
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .services-desc-item:nth-child(2) h2 {
@@ -1102,6 +1140,8 @@ img {
   width: 465px;
   height: 285px;
   background-image: url(../img/credit.png);
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .services-item.current a {
@@ -1191,7 +1231,7 @@ img {
 }
 
 .contacts img {
-  margin-bottom: 19px;
+  /* margin-bottom: 19px; */
   background-color: var(--basic-white);
   object-fit: contain;
 }
@@ -1201,6 +1241,7 @@ img {
 }
 
 .contacts .button {
+  margin-top: 19px;
   width: 300px;
 }
 
@@ -1457,6 +1498,8 @@ img {
   height: 21px;
   background-color: transparent;
   background-image: url(../img/icons/icon-close.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
   border: 0;
   cursor: pointer;
 }
@@ -1504,6 +1547,8 @@ img {
   width: 20px;
   height: 18px;
   background-image: url(../img/icons/user.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .user-info::after {
@@ -1514,6 +1559,8 @@ img {
   width: 20px;
   height: 17px;
   background-image: url(../img/icons/logout.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .user-profile,
@@ -1570,19 +1617,27 @@ img {
 .user-info:hover::before,
 .user-info:focus::before {
   background-image: url(../img/icons/user-hover.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .user-info:active::before {
   background-image: url(../img/icons/user.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .user-info:hover::after,
 .user-info:focus::after {
   background-image: url(../img/icons/logout-hover.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .user-info:active::after {
   background-image: url(../img/icons/logout.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .user-info:active,
@@ -1626,6 +1681,8 @@ img {
   height: 12px;
   margin-top: 6px;
   background-image: url(../img/icons/home.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .breadcrumbs li::before {
@@ -1636,6 +1693,8 @@ img {
   width: 7px;
   height: 11px;
   background-image: url(../img/icons/breadcrumbs-arrow.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .breadcrumbs a,
@@ -1850,6 +1909,8 @@ input[type="number"]:focus {
   width: 23px;
   height: 23px;
   background-image: url(../img/icons/checkbox-off.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
   opacity: 0.7;
 }
 
@@ -1865,6 +1926,8 @@ input[type="number"]:focus {
   width: 27px;
   height: 23px;
   background-image: url(../img/icons/checkbox-on.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
   opacity: 0.7;
 }
 
@@ -2208,6 +2271,8 @@ input[type="number"]:focus {
   width: 66px;
   height: 66px;
   background-image: url(../img/icons/icon-mark.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
 .modal-add-buttons {
@@ -2232,8 +2297,13 @@ input[type="number"]:focus {
 
 .visually-hidden {
   position: absolute;
-  clip: rect(0 0 0 0);
   width: 1px;
   height: 1px;
   margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
