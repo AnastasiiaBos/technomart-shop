@@ -499,7 +499,7 @@ img {
   line-height: 24px;
   color: var(--basic-navy);
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 42px;
   padding: 0;
   padding-left: 6px;
 }
@@ -738,7 +738,7 @@ img {
   z-index: -1;
   width: 620px;
   height: 266px;
-  background-color: var(--basic-white);
+  background-color: rgb(var(--basic-grey));
   object-fit: contain;
 }
 
@@ -1017,6 +1017,7 @@ img {
   display: flex;
   width: 220px;
   height: 145px;
+  color: var(--basic-black);
 }
 
 .popular-producers-item img {
@@ -1234,6 +1235,7 @@ img {
   /* margin-bottom: 19px; */
   background-color: var(--basic-white);
   object-fit: contain;
+  color: var(--basic-black);
 }
 
 .contacts .first-paragraph {
@@ -1526,20 +1528,23 @@ img {
 /* catalog.html header */
 
 .user-info {
-  display: inline-block;
-  position: relative;
-  padding: 12px 56px;
+  display: flex;
+  justify-content: space-between;
+  width: 299px;
   margin-top: 4px;
-  margin-left: 2px;
   margin-bottom: 3px;
-  font-size: 21px;
-  line-height: 21px;
-  box-sizing: border-box;
-  color: var(--basic-black);
   background-color: var(--basic-white);
 }
 
-.user-info::before {
+.user-in {
+  position: relative;
+  font-size: 21px;
+  line-height: 21px;
+  padding: 12px 0px 12px 56px;
+  color: var(--basic-black);
+}
+
+.user-in::before {
   content: "";
   position: absolute;
   top: 13px;
@@ -1551,13 +1556,41 @@ img {
   background-repeat: no-repeat;
 }
 
-.user-info::after {
-  content: "";
-  position: absolute;
-  top: 14px;
-  right: 17px;
+.user-out {
+  align-self: center;
+  margin-right: 17px;
   width: 20px;
   height: 17px;
+  background-image: url(../img/icons/logout.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.user-in:hover::before,
+.user-in:focus::before {
+  background-image: url(../img/icons/user-hover.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.user-in:active::before {
+  background-image: url(../img/icons/user.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.user-in:active {
+  color: rgb(var(--basic-grey));
+}
+
+.user-out:hover,
+.user-out:focus {
+  background-image: url(../img/icons/logout-hover.svg);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.user-out:active {
   background-image: url(../img/icons/logout.svg);
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -1585,16 +1618,13 @@ img {
   color: var(--basic-navy);
 
 }
-.user-profile li {
-  margin-right: 35px;
-}
 
 .user-profile li:first-child {
   margin-left: 44px;
+  margin-right: 35px;
 }
 
 .user-profile li:last-child {
-  margin-right: 0;
   position: relative;
 }
 
@@ -1614,33 +1644,6 @@ img {
   color: var(--basic-red);
 }
 
-.user-info:hover::before,
-.user-info:focus::before {
-  background-image: url(../img/icons/user-hover.svg);
-  background-position: 0 0;
-  background-repeat: no-repeat;
-}
-
-.user-info:active::before {
-  background-image: url(../img/icons/user.svg);
-  background-position: 0 0;
-  background-repeat: no-repeat;
-}
-
-.user-info:hover::after,
-.user-info:focus::after {
-  background-image: url(../img/icons/logout-hover.svg);
-  background-position: 0 0;
-  background-repeat: no-repeat;
-}
-
-.user-info:active::after {
-  background-image: url(../img/icons/logout.svg);
-  background-position: 0 0;
-  background-repeat: no-repeat;
-}
-
-.user-info:active,
 .user-profile a:active {
   color: rgb(var(--basic-grey));
 }
@@ -1656,24 +1659,22 @@ img {
 
 .breadcrumbs {
   grid-column: 1 / -1;
-  margin: 18px 0;
+  margin-top: 16px;
+  margin-bottom: 18px;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  position: relative;
 }
 
-.breadcrumbs li:first-child {
-  margin-left: 55px;
+.breadcrumbs a,
+.breadcrumbs span {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-black);
 }
 
-.breadcrumbs li {
-  position: relative;
-  margin-right: 40px;
-}
-
-.breadcrumbs::before {
-  content: "";
+.icon-main a {
   position: absolute;
   top: 0;
   left: 0;
@@ -1685,7 +1686,16 @@ img {
   background-repeat: no-repeat;
 }
 
-.breadcrumbs li::before {
+.breadcrumbs li {
+  position: relative;
+  margin-right: 40px;
+}
+
+.breadcrumbs li:first-child {
+  margin-right: 54px;
+}
+
+.breadcrumbs li:not(:first-child):before {
   content: "";
   position: absolute;
   top: 6px;
@@ -1695,14 +1705,6 @@ img {
   background-image: url(../img/icons/breadcrumbs-arrow.svg);
   background-position: 0 0;
   background-repeat: no-repeat;
-}
-
-.breadcrumbs a,
-.breadcrumbs span {
-  font-size: 13px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: var(--basic-black);
 }
 
 .breadcrumbs li:last-child {

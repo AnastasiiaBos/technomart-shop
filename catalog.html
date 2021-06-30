@@ -54,7 +54,14 @@
         </section>
         <section class="user">
           <h2 class="visually-hidden">Раздел клиента</h2>
-          <a class="user-info" href="#">Равшан Джамшутович</a>
+          <div class="user-info">
+            <a class="user-in" href="#">
+              <span class="visually-hidden">Зайти в профиль</span>
+              Равшан Джамшутович</a>
+            <a class="user-out" href="#">
+              <span class="visually-hidden">Выйти из профиля</span>
+            </a>
+          </div>
           <ul class="user-profile">
             <li>
               <a href="#">Мои заказы</a>
@@ -94,6 +101,11 @@
     <main class="page-catalog">
       <div class="inner-page-catalog container">
         <ul class="breadcrumbs">
+          <li class="icon-main">
+            <a href="index.html">
+              <span class="visually-hidden">На главную</span>
+            </a>
+          </li>
           <li>
             <a href="catalog.html">Каталог</a>
           </li>
@@ -460,7 +472,6 @@
       </div>
     </footer>
     <section class="modal modal-add"> <!-- модальное окно с сообщением о добавлении товара в корзину, которое открывается при клике по кнопке «Купить»  -->
-     <!-- псевдоэлемент Галочка.svg  -->
      <h2 class="visually-hidden">Добавление товара в корзину</h2>
       <p>Товар добавлен в корзину!</p>
       <div class="modal-add-buttons">
