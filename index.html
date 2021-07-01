@@ -336,11 +336,11 @@
             Вы можете забрать товар сами,<br>
             заехав в наш офис:
           </p>
-          <a href="https://yandex.ru/maps/">
+          <a href="https://yandex.ru/maps/" class="map-link">
             <img src="img/map.jpg" width="300" height="158" alt="Как нас найти">
           </a>
           <p>
-            <a class="button" href="#">Заблудились? Напишите нам!</a>
+            <a class="button connection-button" href="#">Заблудились? Напишите нам!</a>
           </p>
         </section>
       </div>
@@ -444,15 +444,15 @@
         <div class="connection-container">
           <p class="connection-item">
             <label for="connection-login">Ваше имя:</label>
-            <input id="connection-login" type="text" name="user-name" placeholder="Имя Фамилия">
+            <input id="connection-login" class="user-name" type="text" name="user-name" placeholder="Имя Фамилия" required>
           </p>
           <p class="connection-item">
             <label for="connection-email">Ваш e-mail:</label>
-            <input id="connection-email" type="email" name="user-email" placeholder="email@example.com">
+            <input id="connection-email" class="user-email" type="email" name="user-email" placeholder="email@example.com" required>
           </p>
           <p class="connection-item-last">
             <label for="letter">Текст письма:</label>
-            <textarea id="letter" name="user-letter" rows="4" placeholder="В свободной форме"></textarea>
+            <textarea id="letter" name="user-letter" rows="4" placeholder="В свободной форме" required></textarea>
           </p>
         </div>
         <div class="connection-button-container">
@@ -470,5 +470,7 @@
         <span class="visually-hidden">Закрыть</span>
       </button>
     </section>
+    <script src="js/connection.js"></script>
+    <script src="js/map.js"></script>
   </body>
 </html>
