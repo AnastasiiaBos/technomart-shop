@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Интернет-магазин «Техномарт»</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
 
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon/152.svg" type="image/svg+xml">
@@ -63,25 +63,25 @@
       </div>
       <nav class="header-navigation container">
         <ul class="header-navigation-list">
-          <li>
+          <li class="header-navigation-item">
             <a>Главная</a>
           </li>
-          <li>
+          <li class="header-navigation-item">
             <a href="#">Компания</a>
           </li>
-          <li>
+          <li class="header-navigation-item">
             <a href="catalog.html">Каталог</a>
           </li>
-          <li>
+          <li class="header-navigation-item">
             <a href="#">Новости</a>
           </li>
-          <li>
+          <li class="header-navigation-item">
             <a href="#">Спецпредложения</a>
           </li>
-          <li>
+          <li class="header-navigation-item">
             <a href="#">Доставка</a>
           </li>
-          <li>
+          <li class="header-navigation-item">
             <a href="#">Контакты</a>
           </li>
         </ul>
@@ -357,31 +357,31 @@
           </p>
         </div>
         <ul class="footer-navigation">
-          <li>
+          <li class="footer-navigation-item">
             <a href="#">Компания</a>
           </li>
-          <li>
+          <li class="footer-navigation-item">
             <a href="#">Новости</a>
           </li>
-          <li>
+          <li class="footer-navigation-item">
             <a href="catalog.html">Каталог</a>
           </li>
-          <li>
+          <li class="footer-navigation-item">
             <a href="#">Доставка</a>
           </li>
-          <li>
+          <li class="footer-navigation-item">
             <a href="#">Контакты</a>
           </li>
-          <li>
+          <li class="footer-navigation-item">
             <a href="#">Материалы</a>
           </li>
-          <li>
+          <li class="footer-navigation-item">
             <a href="#">Техника</a>
           </li>
-          <li>
+          <li class="footer-navigation-item">
             <a href="#">Инструмент</a>
           </li>
-          <li>
+          <li class="footer-navigation-item">
             <a href="#">Спецпредложения</a>
           </li>
         </ul>
@@ -470,7 +470,19 @@
         <span class="visually-hidden">Закрыть</span>
       </button>
     </section>
-    <script src="js/connection.js"></script>
-    <script src="js/map.js"></script>
+    <section class="modal modal-add"> <!-- модальное окно с сообщением о добавлении товара в корзину, которое открывается при клике по кнопке «Купить»  -->
+      <h2 class="visually-hidden">Добавление товара в корзину</h2>
+       <p>Товар добавлен в корзину!</p>
+       <div class="modal-add-buttons">
+         <button class="button button-sumbit" type="submit">Оформить заказ</button>
+         <button class="button button-continue"  type="button">Продолжить покупки</button>
+       </div>
+       <button class="modal-close" type="button">
+         <span class="visually-hidden">Закрыть</span>
+       </button>
+     </section>
+     <script src="js/add.min.js"></script>
+    <script src="js/connection.min.js"></script>
+    <script src="js/map.min.js"></script>
   </body>
 </html>

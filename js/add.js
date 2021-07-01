@@ -1,9 +1,9 @@
 const purchaseButtons=document.querySelectorAll(".buy");
 const purchasePopup=document.querySelector(".modal-add");
-const purchaseClose=document.querySelector(".modal-close");
+const purchaseClose=purchasePopup.querySelector(".modal-close");
 
 purchaseButtons.forEach(purchaseButton => {
-  purchaseButton.addEventListener('click', event => {
+  purchaseButton.addEventListener("click", event => {
     event.preventDefault();
     purchasePopup.classList.add("modal-show");
   })

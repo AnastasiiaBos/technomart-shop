@@ -280,8 +280,9 @@ img {
   padding-top: 12px;
   padding-bottom: 12px;
   width: 220px;
-  text-align: center;
   line-height: 0;
+  text-align: center;
+  vertical-align: middle;
   background-color: var(--basic-red);
 }
 
@@ -478,6 +479,7 @@ img {
   font-size: 21px;
   line-height: 30px;
   box-sizing: border-box;
+  vertical-align: middle;
   color: var(--basic-red);
   border: 3px solid var(--basic-white);
 }
@@ -579,14 +581,14 @@ img {
   padding: 16px 28px 20px 28px;
 }
 
-/* не знаю как сделать такой отступ и уменьшить вложенность селекторов  */
-.header-navigation-list li:first-child a {
+.header-navigation-item:first-of-type a {
   padding-left: 53px;
+  cursor: pointer;
 }
 
-/* не знаю как сделать такой отступ и уменьшить вложенность селекторов  */
-.header-navigation-list li:last-child a {
+.header-navigation-item:last-of-type a {
   padding-right: 53px;
+  cursor: pointer;
 }
 
 .header-navigation-list a:hover,
@@ -782,6 +784,7 @@ img {
   box-sizing: border-box;
   width: 10px;
   height: 10px;
+  vertical-align: middle;
   background-color: var(--basic-white);
   border: 2px solid var(--basic-white);
   border-radius: 50%;
@@ -1232,7 +1235,6 @@ img {
 }
 
 .contacts img {
-  /* margin-bottom: 19px; */
   background-color: var(--basic-white);
   object-fit: contain;
   color: var(--basic-black);
@@ -1266,8 +1268,9 @@ img {
   padding-bottom: 25px;
   margin-bottom: 24px;
   width: 220px;
-  text-align: center;
   line-height: 0;
+  text-align: center;
+  vertical-align: middle;
   background-color: var(--basic-red);
   box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
 }
@@ -1301,11 +1304,11 @@ img {
   margin-bottom: 34px;
 }
 
-.footer-navigation li:nth-child(5n) {
+.footer-navigation-item:nth-child(5n) {
   margin-right: 0;
 }
 
-.footer-navigation li:nth-child(n+6) a {
+.footer-navigation-item:nth-child(n+6) a {
   color: var(--basic-orange);
 }
 
@@ -1466,7 +1469,7 @@ img {
   border-radius: 2px;
 }
 
-.connection-item-last textarea{
+.connection-item-last textarea {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   font-weight: 400;
@@ -1811,7 +1814,7 @@ img {
   justify-content: space-between;
 }
 
-.price-controls label{
+.price-controls label {
   font-family: "Cuprum", Arial, sans-serif;
   font-weight: normal;
   font-size: 16px;
@@ -1978,7 +1981,6 @@ input[type="number"]:focus {
   border-radius: 50%;
 }
 
-/* tab перескакивает не чекнутый */
 .filter-input-radio:focus + label::before,
 .filter-input-radio:hover + label::before {
   border-color: var(--hover-grey);
