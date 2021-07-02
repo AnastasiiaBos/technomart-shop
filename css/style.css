@@ -1715,7 +1715,7 @@ img {
   margin-left: 3px;
 }
 
-.page-catalog h1 {
+.page-catalog-header {
   grid-column: 1 / -1;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
