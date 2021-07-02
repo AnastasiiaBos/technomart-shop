@@ -43,7 +43,7 @@
   font-style: normal;
   font-weight: 400;
   src:
-    local("PT Sans"),
+    local("PT Sans"), local("PT Sans Regular"),
     url("../fonts/ptsans.woff2") format("woff2"),
     url("../fonts/ptsans.woff") format("woff");
 }
@@ -53,7 +53,7 @@
   font-style: normal;
   font-weight: 700;
   src:
-    local("PT Sans"),
+    local("PT Sans"), local("PT Sans Bold"),
     url("../fonts/ptsansbold.woff2") format("woff2"),
     url("../fonts/ptsansbold.woff") format("woff");
 }
@@ -264,10 +264,9 @@ img {
 .header-top {
   display: grid;
   grid-template-columns: 490px 1fr;
-  background-color: var(--basic-extra-navy);
 }
 
-.header-top-container {
+.header-logo-search {
   display: grid;
   grid-template-columns: auto 1fr;
 }
@@ -986,7 +985,8 @@ img {
 }
 
 .popular-list-item:hover .buy-bookmarks-wrapper,
-.popular-list-item:focus .buy-bookmarks-wrapper{
+.popular-list-item:focus .buy-bookmarks-wrapper,
+.popular-list-item:focus-within .buy-bookmarks-wrapper {
   display: block;
 }
 
@@ -2174,7 +2174,8 @@ input[type="number"]:focus {
 }
 
 .catalog-item:hover .buy-bookmarks-wrapper,
-.catalog-item:focus .buy-bookmarks-wrapper{
+.catalog-item:focus .buy-bookmarks-wrapper,
+.catalog-item:focus-within .buy-bookmarks-wrapper {
   display: block;
 }
 
