@@ -3,7 +3,6 @@ const sliderControlsArray = document.querySelectorAll('.slider-controls-button')
 const forwardButton = document.querySelector('.forward');
 const backButton = document.querySelector('.back');
 
-
 let i = 0;
 
 forwardButton.addEventListener('click', () => {
@@ -32,10 +31,8 @@ backButton.addEventListener('click', () => {
   sliderControlsArray[i].classList.add('current');
 });
 
-let j = 0;
-
-for (let j = 0; j < sliderControlsArray.length; j++) {
-  sliderControlsArray[j].addEventListener('click', () => {
+sliderControlsArray.forEach((sliderControl, index) => {
+  sliderControl.addEventListener('click', () => {
     sliderControlsArray.forEach(sliderControl => {
       sliderControl.classList.remove('current');
     });
@@ -44,8 +41,9 @@ for (let j = 0; j < sliderControlsArray.length; j++) {
       sliderItem.classList.remove('slide-current');
     });
 
-    sliderItemsArray[j].classList.add('slide-current');
-    sliderControlsArray[j].classList.add('current');
-  });
-}
+    i = index;
 
+    sliderItemsArray[index].classList.add('slide-current');
+    sliderControlsArray[index].classList.add('current');
+  })
+});
